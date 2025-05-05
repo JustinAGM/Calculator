@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="calculator">
+        <div class="display">
+          <div class="input" aria-live="polite"></div>
+          <div class="output" aria-live="assertive"></div>
+        </div>
+        <div class="keys">
+          <!-- 1st Horizontal Keys -->
+          <div
+            data-key="clear"
+            class="key action"
+            tabindex="0"
+            aria-label="Clear"
+          >
+            <span>AC</span>
+          </div>
+          <div
+            data-key="brackets"
+            class="key action"
+            tabindex="0"
+            aria-label="Toggle brackets"
+          >
+            <span>( )</span>
+          </div>
+          <div
+            data-key="%"
+            class="key operator"
+            tabindex="0"
+            aria-label="Percentage"
+          >
+            <span>%</span>
+          </div>
+          <div
+            data-key="/"
+            class="key operator"
+            tabindex="0"
+            aria-label="Division"
+          >
+            <span>÷</span>
+          </div>
+
+          <!-- 2nd Horizontal Keys -->
+          <div data-key="7" class="key" tabindex="0" aria-label="Number 7">
+            <span>7</span>
+          </div>
+          <div data-key="8" class="key" tabindex="0" aria-label="Number 8">
+            <span>8</span>
+          </div>
+          <div data-key="9" class="key" tabindex="0" aria-label="Number 9">
+            <span>9</span>
+          </div>
+          <div
+            data-key="*"
+            class="key operator"
+            tabindex="0"
+            aria-label="Multiplication"
+          >
+            <span>X</span>
+          </div>
+
+          <!-- 3rd Horizontal Keys -->
+          <div data-key="4" class="key" tabindex="0" aria-label="Number 4">
+            <span>4</span>
+          </div>
+          <div data-key="5" class="key" tabindex="0" aria-label="Number 5">
+            <span>5</span>
+          </div>
+          <div data-key="6" class="key" tabindex="0" aria-label="Number 6">
+            <span>6</span>
+          </div>
+          <div
+            data-key="-"
+            class="key operator"
+            tabindex="0"
+            aria-label="Subtraction"
+          >
+            <span>-</span>
+          </div>
+
+          <!-- 4th Horizontal Keys -->
+          <div data-key="1" class="key" tabindex="0" aria-label="Number 1">
+            <span>1</span>
+          </div>
+          <div data-key="2" class="key" tabindex="0" aria-label="Number 2">
+            <span>2</span>
+          </div>
+          <div data-key="3" class="key" tabindex="0" aria-label="Number 3">
+            <span>3</span>
+          </div>
+          <div
+            data-key="+"
+            class="key operator"
+            tabindex="0"
+            aria-label="Addition"
+          >
+            <span>+</span>
+          </div>
+
+          <!-- Last Horizontal Keys -->
+          <div
+            data-key="backspace"
+            class="key action"
+            tabindex="0"
+            aria-label="Backspace"
+          >
+            <span>&lt;</span>
+          </div>
+          <div data-key="0" class="key" tabindex="0" aria-label="Number 0">
+            <span>0</span>
+          </div>
+          <div data-key="." class="key" tabindex="0" aria-label="Decimal point">
+            <span>.</span>
+          </div>
+          <div
+            data-key="="
+            class="key action"
+            tabindex="0"
+            aria-label="Calculate result"
+          >
+            <span>=</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
