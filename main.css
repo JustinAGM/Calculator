@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(166, 209, 166, 0.74);
+}
+
+/* Calculator container */
+.calculator {
+    background-color: #48A6A7;
+    width: 100%;
+    max-width: 375px;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #f765ef;
+}
+
+/* Display area (Input & Output) */
+.display {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 200px;
+    padding: 1.5rem;
+    color: white;
+}
+
+.display .input {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.display .output {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+/* Keypad styles */
+.keys {
+    background-color: #9ACBD0;
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 4 columns of keys */
+    grid-template-rows: repeat(5, 1fr); /* Creates a 5-row grid */
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual keys */
+.keys .key {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%; /* Keeps buttons square */
+    background-color: #F2EFE7;
+    border-radius: 1rem;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+}
+
+.keys .key span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(7, 61, 39);
+}
+
+/* Hover effect on keys */
+.keys .key:hover {
+    box-shadow: inset 0px 0px 12px rgba(143, 143, 143, 0.747);
+    background-color: #333;
+}
+
+.keys .key.operator span {
+    color: #f765ef;
+}
+
+.keys .key.action span {
+    color: #34d7e6;
+}
+
+.key.active {
+    background-color: #ddd;
+    transform: scale(0.98);
+}
+
+.keys .key:focus {
+    outline: 2px solid #26fed7;
+    outline-offset: 2px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+    .display .input {
+        font-size: 1rem;
+    }
+
+    .display .output {
+        font-size: 2.5rem;
+    }
+
+    .keys .key span {
+        font-size: 1.5rem;
+    }
+
+    .keys {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for small screens */
+    }
+
+    .keys .key {
+        padding-top: 90%; /* Keeps keys square but more compact */
+    }
+
+    .calculator {
+        min-height: 90vh;
+    }
+}
+
+@media (max-width: 375px) {
+    .calculator {
+        width: 100%;
+    }
+
+    .display .input {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .display .output {
+        font-size: 2.2rem;
+    }
+
+    .keys {
+        padding: 1.2rem;
+    }
+
+    .keys .key span {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .display .input {
+        font-size: 0.9rem;
+    }
+
+    .display .output {
+        font-size: 2rem;
+    }
+
+    .keys .key span {
+        font-size: 1.2rem;
+    }
+
+    .keys {
+        grid-template-columns: repeat(3, 1fr); /* Keeps 3 columns on small screens */
+    }
+}
+
+@media (max-height: 700px) {
+    .calculator {
+        min-height: 90vh; /* Adjusts the height for smaller screens */
+    }
+}
